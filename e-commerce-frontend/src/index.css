@@ -1,0 +1,97 @@
+@import url("https://rsms.me/inter/inter.css");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+th{
+   @apply px-6 py-2 text-xs font-medium tracking-wider text-left text-gray-500 uppercase
+}
+
+td{
+  @apply  px-6 py-3 text-sm text-gray-500 whitespace-nowrap
+}
+
+.sidebar-item{
+  @apply block rounded-lg px-4 py-1 text-sm font-medium text-white hover:bg-indigo-800
+}
+
+input{
+  @apply focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm file:border-0 file:mr-5 file:py-1 file:px-3 file:text-xs file:font-medium file:bg-stone-50 file:text-stone-700
+}
+
+.active-pg-page{
+  @apply z-10 bg-indigo-50 border-indigo-500 text-indigo-600 relative inline-flex items-center px-4 py-2 text-sm font-medium
+}
+
+.pg-page{
+  @apply z-10 relative items-center px-4 py-2 border text-sm font-medium
+}
+
+.pg-container{
+  @apply relative z-0 inline-flex w-full justify-end my-4 pr-6
+}
+
+.pg-prev{
+  @apply relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50
+}
+
+.pg-next{
+  @apply relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50
+}
+
+
+.loader {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      position: relative;
+      animation: rotate 1s linear infinite
+    }
+    .loader::before {
+      content: "";
+      box-sizing: border-box;
+      position: absolute;
+      inset: 0px;
+      border-radius: 50%;
+      border: 5px solid black;
+      
+      animation: prixClipFix 2s linear infinite ;
+    }
+
+    @keyframes rotate {
+      100%   {transform: rotate(360deg)}
+    }
+
+    @keyframes prixClipFix {
+        0%   {clip-path:polygon(50% 50%,0 0,0 0,0 0,0 0,0 0)}
+        25%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 0,100% 0,100% 0)}
+        50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
+        75%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 100%)}
+        100% {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 0)}
+    }
+    
+.rcw-launcher{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.rcw-picker-btn{
+    display: none;
+}
+.rcw-sender{
+    display: flex;
+    align-items: center !important;
+    justify-content: space-between;
+}
+.rcw-widget-container h1,h4,p,b {
+    font-family: Inter var, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+}
+.rcw-launcher{
+    --tw-bg-opacity:1;
+    background-color: rgb(79 70 229 / var(--tw-bg-opacity)) !important;
+}
+.rcw-header{
+    --tw-bg-opacity:1;
+    background-color: rgb(79 70 229 / var(--tw-bg-opacity)) !important;
+}
